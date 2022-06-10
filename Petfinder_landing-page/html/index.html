@@ -25,40 +25,48 @@
     </div>
 
     <!-- popup 창 -->
-    <div class="popup-gnb">
-        <div class="gnb">
-            <img src="../images/logo_yellow.png" alt="">
+    <section class="popup-dimmed"></section>
+        <div class="popup-gnb">
 
-            <div class="boxes">
-                <div class="box">
-                    <img src="../images/dog.png" alt="">
-                    <span>DOG CARE</span>
-                </div>
-                <div class="box">
-                    <img src="../images/cat.png" alt="">
-                    <span>CAT CARE</span>
-                </div>
-                <div class="box">
-                    <img src="../images/paw.png" alt="">
-                    <span>ALL PET CARE</span>
-                </div>
-                <div class="box">
-                    <img src="../images/animal-care.png" alt="">
-                    <span class="last">HELPING PETS</span>
-                </div>
+            <div class="close-btn">
+                <span></span>
+                <span></span>
             </div>
 
-            <div class="search-wrap">
-                <h3>For Adoption Nearby</h3>
-                <div class="search-box">
-                    <input type="text" placeholder="Enter Your Location">
-                    <a href="#"><div class="search-icon">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    </div></a>
+            <div class="gnb">
+                <img src="../images/logo_yellow.png" alt="">
+
+                <div class="boxes">
+                    <div class="box">
+                        <img src="../images/dog.png" alt="">
+                        <span>DOG CARE</span>
+                    </div>
+                    <div class="box">
+                        <img src="../images/cat.png" alt="">
+                        <span>CAT CARE</span>
+                    </div>
+                    <div class="box">
+                        <img src="../images/paw.png" alt="">
+                        <span>ALL PET CARE</span>
+                    </div>
+                    <div class="box">
+                        <img src="../images/animal-care.png" alt="">
+                        <span class="last">HELPING PETS</span>
+                    </div>
+                </div>
+
+                <div class="search-wrap">
+                    <h3>For Adoption Nearby</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Enter Your Location">
+                        <a href="#"><div class="search-icon">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
 
 <!-- -->
 
@@ -98,11 +106,13 @@
         $(".cat-btn").click(function () {
             $(this).toggleClass("on");
             $(".popup-gnb").toggleClass("on");
+            $(".popup-dimmed").toggleClass("on");
         });
 
         // 바탕 아무 곳이나 눌러도 popup 창이 사라지게 하기
-        $(".container").click(function () { // .container 를 기준으로
+        $(".popup-dimmed").click(function () { // .container 를 기준으로
             $(".popup-gnb").removeClass("on");
+            $(".popup-dimmed").removeClass("on"); // dimmed 도 사라지게
             $(".cat-btn").removeClass("on") // 햄버거 X 도 사라지게 해주기
         });
 
