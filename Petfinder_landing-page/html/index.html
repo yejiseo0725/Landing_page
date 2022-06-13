@@ -104,10 +104,17 @@
     <script>
         // 햄버거 클릭시, popup 창 toggle 로 나오게 하기
         $(".cat-btn").click(function () {
-            $(this).toggleClass("on");
-            $(".popup-gnb").toggleClass("on");
-            $(".popup-dimmed").toggleClass("on");
+            $(this).addClass("on");
+            $(".popup-gnb").addClass("on");
+            $(".popup-dimmed").addClass("on");
         });
+
+        // popup 의 close 버튼 클릭시, 원래대로 돌아오게
+        $(".close-btn").click(function () {
+            $(".cat-btn").removeClass("on");
+            $(".popup-gnb").removeClass("on");
+            $(".popup-dimmed").removeClass("on");
+        })
 
         // 바탕 아무 곳이나 눌러도 popup 창이 사라지게 하기
         $(".popup-dimmed").click(function () { // .container 를 기준으로
