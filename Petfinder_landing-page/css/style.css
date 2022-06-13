@@ -62,6 +62,7 @@ body {
     z-index: 11;
 }
 
+/* popup 창 기준으로 위치됨 */
 .close-btn {
     top: 50px;
     right: 50px;
