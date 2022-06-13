@@ -51,7 +51,8 @@ body {
     width: 140px;
 }
 
-.cat-btn {
+.cat-btn,
+.close-btn {
     width: 30px;
     height: 20px;
     position: fixed;
@@ -60,7 +61,14 @@ body {
     cursor: pointer;
     z-index: 11;
 }
-.cat-btn span {
+
+.close-btn {
+    top: 50px;
+    right: 50px;
+}
+
+.cat-btn span,
+.close-btn span {
     position: absolute;
     display: block;
     width: 100%;
@@ -68,6 +76,7 @@ body {
     background: #1c1c1c;
     /*transition: 0.3s;*/
 }
+
 .cat-btn span:nth-child(1) {
     top: 0;
 }
@@ -78,6 +87,13 @@ body {
 
 .cat-btn span:nth-child(4) {
     top: 100%;
+}
+
+.close-btn span:nth-child(1) {
+    transform: rotate(45deg);
+}
+.close-btn span:nth-child(2) {
+    transform: rotate(135deg);
 }
 
 /* on */
